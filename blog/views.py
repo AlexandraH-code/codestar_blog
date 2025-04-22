@@ -12,5 +12,7 @@ class PostList(generic.ListView):
     # queryset = Post.objects.all()
     # queryset = Post.objects.filter(author=1)
     # queryset = Post.objects.all().order_by("-created_on")
+    template_name = "blog/index.html"
+    paginate_by = 6
     queryset = Post.objects.filter(status=1)
-    template_name = "post_list.html"
+    
